@@ -69,7 +69,7 @@ public extension RCCoder {
 
 extension RCCoder {
   
-  func decode(buffer: UnsafeMutablePointer<UInt8>) throws -> String {
+  public func decode(buffer: UnsafeMutablePointer<UInt8>) throws -> String {
     let bits = try imageDecoder.process(pointer: buffer)
     let message = try bitCoder.decode(bits)
     return message
