@@ -76,3 +76,10 @@ extension RCCoder {
   }
 }
 
+extension RCCoder {
+    public func configure(bytes: Int, imageDecoderSize: Int) {
+        self.imageDecoder.size = imageDecoderSize
+        self.imageDecoder.bytesPerRow = bytes
+    }
+}
+
